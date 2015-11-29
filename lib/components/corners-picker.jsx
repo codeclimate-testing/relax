@@ -32,43 +32,6 @@ export default class CornersPicker extends Component {
     return values.tl+'px '+values.tr+'px '+values.br+'px '+values.bl+'px';
   }
 
-  parseValue (value) {
-    var values = value.split(' ');
-    var result = {
-      tl: 0,
-      bl: 0,
-      tr: 0,
-      br: 0,
-      equal: false
-    };
-
-    if (values.length === 1) {
-      var parsedValue = parseInt(values[0], 10);
-      result.tl = parsedValue;
-      result.br = parsedValue;
-      result.bl = parsedValue;
-      result.tr = parsedValue;
-    } else if (values.length === 2) {
-      result.tl = parseInt(values[0], 10);
-      result.tr = parseInt(values[1], 10);
-      result.br = parseInt(values[0], 10);
-      result.bl = parseInt(values[1], 10);
-    } else if (values.length === 4) {
-      result.tl = parseInt(values[0], 10);
-      result.tr = parseInt(values[1], 10);
-      result.br = parseInt(values[2], 10);
-      result.bl = parseInt(values[3], 10);
-    }
-
-    if (result.tl === result.tr && result.tl === result.br && result.tl === result.bl) {
-      result.equal = true;
-    } else {
-      result.equal = false;
-    }
-
-    return result;
-  }
-
   changeSelected (selected, event) {
     event.preventDefault();
     this.setState({
