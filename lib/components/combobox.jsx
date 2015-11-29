@@ -38,6 +38,9 @@ export default class Combobox extends Component {
     );
   }
 
+  var Hello = <div>test</div>;
+  var Danger = <div dangerouslySetInnerHTML={{ __html: "Hello World" }}></div>;
+
   render () {
     var className = 'combobox-holder' + (this.state.opened ? ' opened' : '');
 
