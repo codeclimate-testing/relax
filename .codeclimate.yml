@@ -1,7 +1,7 @@
 ---
 engines:
   eslint:
-    enabled: false
+    enabled: true
     config:
       extensions: [".js", ".jsx"]
   duplication:
