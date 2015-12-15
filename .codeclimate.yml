@@ -1,18 +1,24 @@
 ---
 engines:
-  eslint:
-    enabled: false
-    config:
-      extensions: [".js", ".jsx"]
   duplication:
     enabled: true
     config:
       languages:
-        javascript: {}
+      - ruby
+      - javascript
+      - python
+      - php
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
 ratings:
   paths:
+  - "**.inc"
   - "**.js"
   - "**.jsx"
-exclude_paths:
-  - "Gruntfile.js"
-  - "assets/**/*"
+  - "**.module"
+  - "**.php"
+  - "**.py"
+  - "**.rb"
+exclude_paths: []
