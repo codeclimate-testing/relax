@@ -4,7 +4,7 @@ engines:
     config:
       extensions: [".js", ".jsx"]
   duplication:
-    enabled: true
+    enabled: false
     config:
       languages:
         javascript: {}
