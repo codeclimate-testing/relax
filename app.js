@@ -23,3 +23,5 @@ migrate()
   .done();
 
 mongoose.connect(config.db.uri, config.db);
+
+mongoose.connect(config.db.uri, config.db);
