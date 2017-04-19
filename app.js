@@ -22,6 +22,15 @@ migrate()
   })
   .done();
 
-mongoose.connect(config.db.uri, config.db);
+migrate()
+  .then(() => {
+    // Start server
+    var server = app.listen(config.port, () => {
+      var port = server.address().port;
+      logger.debug('Listening at port', port);
+    });
+  })
+  .done();
 
+mongoose.connect(config.db.uri, config.db);
 mongoose.connect(config.db.uri, config.db);
